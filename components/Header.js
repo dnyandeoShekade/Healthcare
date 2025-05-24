@@ -1,0 +1,89 @@
+// export function Header() {
+//   return (
+//     <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
+//       <div className="flex items-center space-x-6">
+//         <h1 className="text-2xl font-bold text-cyan-500">Healthcare.</h1>
+//         <div className="relative">
+//           <svg
+//             className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4"
+//             fill="none"
+//             stroke="currentColor"
+//             viewBox="0 0 24 24"
+//           >
+//             <path
+//               strokeLinecap="round"
+//               strokeLinejoin="round"
+//               strokeWidth={2}
+//               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+//             />
+//           </svg>
+//           <input
+//             type="text"
+//             placeholder="Search"
+//             className="pl-10 w-80 bg-gray-50 border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+//           />
+//         </div>
+//       </div>
+
+//       <div className="flex items-center space-x-4">
+//         <button className="p-2 hover:bg-gray-100 rounded-md">
+//           <svg className="h-5 w-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-5 5-5-5h5v-12" />
+//           </svg>
+//         </button>
+//         <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center">
+//           <span className="text-white text-sm font-medium">JD</span>
+//         </div>
+//         <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md flex items-center">
+//           <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+//           </svg>
+//         </button>
+//       </div>
+//     </header>
+//   )
+// }
+import { Search, Bell, Plus } from "lucide-react";
+
+export function Header() {
+  return (
+    <header className="bg-[#F6FAFF]  border-gray-200 px-6 py-4 rounded-md">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        {/* Left side - Logo */}
+        <h1 className="text-2xl font-semibold text-[#02E2F1]">Health<span className="text-[#3734A9]">care.</span></h1>
+
+        {/* <div className="flex-1 flex justify-center px-8 "> */}
+          <div className="flex-1 flex px-[120px] ">
+          <div className="relative w-full max-w-md ">
+            {/* Search icon on the left side inside input */}
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
+
+            {/* Bell icon on the right side inside input */}
+            <Bell className="absolute right-3 top-1/2 -translate-y-1/2 font-bold text-[#3733AB] w-4 h-4" />
+
+            {/* Input field with padding for both icons */}
+            <input
+              type="text"
+              placeholder="Search"
+              className="w-full pl-10 pr-10 py-2 px-3 text-sm bg-gray-50 border border-gray-200 rounded-md focus:outline-none   "
+            />
+          </div>
+        </div>
+        {/* Right side - Icons */}
+        <div className="flex items-center space-x-4">
+          <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center">
+            {/* <span className="text-white text-sm font-medium">JD</span> */}
+            <img
+              src="/154452ec-4932-4e09-b6da-1927174f26dc.png" // Adjust path if needed
+              alt="Avatar"
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full"
+            />
+          </div>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md flex items-center">
+            <Plus className="h-4 w-4" />
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+}
