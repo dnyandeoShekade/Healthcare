@@ -9,8 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* --background: #0a0a0a;
-    --foreground: #ededed; */
+   
     --foreground: #0a0a0a;
     --background: #ffffff;
 
@@ -20,6 +19,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Times New Roman", serif;
+  font-family: sans-serif;
+  /* font-family: "Times New Roman", sans-serif; */
   /* padding: 50px; */
 }

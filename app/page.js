@@ -1,22 +1,16 @@
 import Image from "next/image";
 
-import CalendarView from "../components/Dashboard/CalendarView";
+import Sidebar from "../components/comman/Sidebar";
 import { DashboardMainContent } from "./dashboard/DashboardMainContent";
-// import { Sidebar } from "../components/Dashboard/Sidebar";
-import { Header } from "../components/Header";
-import Sidebar from "../components/Dashboard/Sidebar";
+import Header from "../components/comman/Header";
 
 export default function Home() {
   return (
-    <div className="border">
+    <div className="flex flex-col ">
       <Header />
-
-      <div className=" bg-gray-50 flex ">
+      <div className="flex flex-1">
         <Sidebar />
-        <div className="flex-1 flex flex-col ">
-          {/* <Header /> */}
-          <DashboardMainContent />
-        </div>
+        <DashboardMainContent />
       </div>
     </div>
   );
